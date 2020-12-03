@@ -1,4 +1,4 @@
-const { passwordPhilosophy } = require("../2_password_philosophy");
+const { passwordPhilosophy, corpAuth } = require("../2_password_philosophy");
 
 const inputStr = `8-11 l: qllllqllklhlvtl
 1-3 m: wmmmmmttm
@@ -1017,6 +1017,19 @@ describe("passwordPhilosophy", () => {
   });
   test("should identify the total number of matches from the input data", () => {
     const input = inputStr;
-    expect(passwordPhilosophy(input)).toBe(1);
+    expect(passwordPhilosophy(input)).toBe(416);
+  });
+});
+
+describe("corpAuth", () => {
+  test("should correctly validate example passwords", () => {
+    const input = `1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc`;
+    expect(corpAuth(input)).toBe(1);
+  });
+  test("should correctly validate example passwords", () => {
+    const input = inputStr;
+    expect(corpAuth(input)).toBe(688);
   });
 });
