@@ -1,19 +1,19 @@
 //to reach the bottom, need 3x as many cols as rows
-const traverse = (input) => {
+const traverse = (input, x, y) => {
   let trees = 0;
   const rows = input.split("\n");
   const height = rows.length;
   const width = rows[0].length;
-  console.log("width>>>", width);
-  console.log("height>>>", height);
-  console.log("rows>>>", rows);
+  //console.log("width>>>", width);
+  //console.log("height>>>", height);
+  //console.log("rows>>>", rows);
 
   let col = 0;
-  for (let row = 0; row < height; row++) {
+  for (let row = 0; row < height; row += y) {
     if (rows[row][col] === "#") trees++;
-    col = col + 3 < width ? col + 3 : col + 3 - width;
+    col = col + x < width ? col + x : col + x - width;
   }
-  console.log(trees);
+  //console.log(trees);
   return trees;
 };
 

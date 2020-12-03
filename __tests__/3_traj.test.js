@@ -350,14 +350,14 @@ const input = `.#..............##....#.#.####.
 
 describe("traverse", () => {
   test("should return the correct number of trees from the test data", () => {
-    expect(traverse(inputExample)).toBe(7);
+    expect(traverse(inputExample, 3, 1)).toBe(7);
   });
 
   it("should return the correct number of trees when supplied with the smallest repeatable unit", () => {
-    expect(traverse(unit)).toBe(7);
+    expect(traverse(unit, 3, 1)).toBe(7);
   });
 
   test("should return the correct number of trees from actual data", () => {
-    expect(traverse(input)).toBe(7);
+    expect(traverse(input, 3, 1)).toBe(193);
   });
 });
