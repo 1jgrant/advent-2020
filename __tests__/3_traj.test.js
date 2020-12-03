@@ -1,4 +1,4 @@
-const { traverse } = require("../3_traj");
+const { traverse, multiTraverse } = require("../3_traj");
 
 const inputExample = `..##.........##.........##.........##.........##.........##.......
 #...#...#..#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..
@@ -359,5 +359,11 @@ describe("traverse", () => {
 
   test("should return the correct number of trees from actual data", () => {
     expect(traverse(input, 3, 1)).toBe(193);
+  });
+});
+
+describe("multTraverse", () => {
+  test("should return the correct sum of trees from the test data", () => {
+    expect(multiTraverse(unit)).toBe(336);
   });
 });

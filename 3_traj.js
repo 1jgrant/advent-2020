@@ -17,6 +17,19 @@ const traverse = (input, x, y) => {
   return trees;
 };
 
-const multiTraverse = (input = {});
+const multiTraverse = (input) => {
+  const moves = [
+    [1, 1],
+    [3, 1],
+    [5, 1],
+    [7, 1],
+    [1, 2],
+  ];
+  const trees = moves.map((move) => traverse(input, move[0], move[1]));
+  console.log(trees);
+  const sum = trees.reduce((acc, currentVal) => acc * currentVal);
+  console.log(sum);
+  return sum;
+};
 
-module.exports = { traverse };
+module.exports = { traverse, multiTraverse };
