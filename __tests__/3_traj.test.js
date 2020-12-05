@@ -366,4 +366,7 @@ describe("multTraverse", () => {
   test("should return the correct sum of trees from the test data", () => {
     expect(multiTraverse(unit)).toBe(336);
   });
+  it("should return the correct sum of the actual data", () => {
+    expect(multiTraverse(input)).toBe(1355323200);
+  });
 });

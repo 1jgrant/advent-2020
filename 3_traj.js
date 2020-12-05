@@ -26,9 +26,9 @@ const multiTraverse = (input) => {
     [1, 2],
   ];
   const trees = moves.map((move) => traverse(input, move[0], move[1]));
-  console.log(trees);
+  //console.log(trees);
   const sum = trees.reduce((acc, currentVal) => acc * currentVal);
-  console.log(sum);
+  //console.log(sum);
   return sum;
 };
 
