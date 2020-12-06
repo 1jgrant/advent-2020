@@ -1,4 +1,5 @@
 const { boarding } = require("./5_p1");
+const { findSeat } = require("./5_p2");
 
 const data = `BFBFFFFLLL
 BBFBBFBRLL
@@ -856,5 +857,11 @@ describe("Day 5 - p1", () => {
   });
   test("should identify highest seatId for actual data", () => {
     expect(boarding(data)).toBe(919);
+  });
+});
+
+describe("Day 5 - p2", () => {
+  it("should return the missing seat", () => {
+    expect(findSeat(data)).toBe(642);
   });
 });
