@@ -2220,7 +2220,7 @@ bdlitrzuwh
 epfmuhgvstibr`;
 
 describe("Day 6 - Part 1", () => {
-  it("customsP1 should return sum of answers from test data", () => {
+  it.only("customsP1 should return sum of answers from test data", () => {
     expect(customsP1(testData)).toBe(11);
   });
   it("should return the sum of answers from the real data", () => {
