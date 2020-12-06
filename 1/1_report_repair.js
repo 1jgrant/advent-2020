@@ -201,19 +201,15 @@ const inputString = `1728
 
 const reportRepair = (inputString) => {
   const nums = inputString.split("\n").map((element) => Number(element));
-  const three = [];
-  nums.forEach((num) => {
-    nums.forEach((comp1) => {
-      nums.forEach((comp2) => {
-        if (num + comp1 + comp2 === 2020) {
-          three.push([num, comp1, comp2]);
+  nums.forEach((i) => {
+    nums.forEach((j) => {
+      nums.forEach((k) => {
+        if (i + j + k === 2020) {
+          return i * j * k;
         }
       });
     });
   });
-
-  const sum = three[0].reduce((acc, currentVal) => acc * currentVal);
-  return sum;
 };
 
 module.exports = { reportRepair, inputString };
