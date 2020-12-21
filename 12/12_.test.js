@@ -1,4 +1,5 @@
 const nav = require("./12_p1");
+const nav2 = require("./12_p2");
 
 const testData = `F10
 N3
@@ -799,5 +800,14 @@ describe("Day 12 P1", () => {
   });
   test("should find the manhattan distance of the puzzle data", () => {
     expect(nav(data)).toBe(1177);
+  });
+});
+
+describe("Day 12 P2", () => {
+  test("should find the manhattan distance for the test data", () => {
+    expect(nav2(testData)).toBe(286);
+  });
+  test("should find the manhattan distance for the puzzle data", () => {
+    expect(nav2(data)).toBe(46530);
   });
 });
