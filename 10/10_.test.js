@@ -1,4 +1,17 @@
 const jolts = require("./10_p1");
+const joltPermutations = require("./10_p2");
+
+const smallTestData = `16
+10
+15
+5
+1
+11
+7
+19
+6
+12
+4`;
 
 const testData = `28
 33
@@ -140,3 +153,9 @@ describe("Day 10 P1", () => {
     expect(jolts(data)).toBe(2244);
   });
 });
+
+// describe("Day 10 P2", () => {
+//   test("should find the number of valid permutations for the small test data", () => {
+//     expect(joltPermutations(smallTestData)).toBe(8);
+//   });
+// });
